@@ -28,7 +28,7 @@ class Kind(BaseKind):
         if content.endswith('/'):
             os.makedirs(os.path.join(path, content))
         else:
-            Path(path).touch()
+            Path(os.path.join(path, content)).touch()
 
     def action_delete(self, context):
         target = context['targets'][0]
