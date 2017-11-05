@@ -40,7 +40,7 @@ class Source(Rec):
                 candidates.append({
                     'word': relF,
                     'abbr': relF + ('/' if os.path.isdir(f) else ''),
-                    'kind': ('file_manager_dir' if os.path.isdir(f) else 'file_manager_file'),
+                    'kind': ('file_manager_dir' if os.path.isdir(f) else 'file_manager_files'),
                     'action__path': abspath(self.vim, f),
                     })
         else:
@@ -48,5 +48,5 @@ class Source(Rec):
                     if x['action__path'] != context['__directory']]
             for candidate in candidates:
                 candidate['abbr'] = candidate['word'] + '/'
-                candidate['kind'] = 'file_manager_dir' if os.path.isdir(candidate['action__path']) else 'file_manager_file'
+                candidate['kind'] = 'file_manager_dir' if os.path.isdir(candidate['action__path']) else 'file_manager_files'
         return candidates

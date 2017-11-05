@@ -13,4 +13,4 @@ class Kind(FileManagerKind, FileKind):
         super().__init__(vim)
 
         self.default_action = 'open'
-        self.name = 'file_manager_file'
+        self.name = 'file_manager_files'
