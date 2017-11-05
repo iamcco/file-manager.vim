@@ -19,4 +19,7 @@ Plug 'iamcco/file-manager.vim'
 :Denite file_manager
 ```
 
-with more `add` `delete` `move` `copy` `rename` actions than the default Denite `file` source
+with more `add` `delete` `move` `copy` `rename` actions than the Denite `directory_rec` source
+
+> for directory default action is `narrow` and the behavior is like the `narrow` action in `file` source
+> will list the directory and file under the select directory

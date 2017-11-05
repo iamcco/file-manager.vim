@@ -14,3 +14,7 @@ class Kind(FileManagerKind, DirectoryKind):
 
         self.default_action = 'narrow'
         self.name = 'file_manager_dir'
+
+    def action_narrow(self, context):
+        target = context['targets'][0]
+        context['input'] = target['abbr']
